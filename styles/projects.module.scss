@@ -1,0 +1,17 @@
+@import "./darkmode.module.scss";
+@import "./variables.module.scss";
+
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $main-content-padding;
+  margin: auto;
+  justify-content: center;
+}
+.projectCard {
+  width: 380px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: $background-light;
+}

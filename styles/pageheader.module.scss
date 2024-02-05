@@ -1,0 +1,92 @@
+@import "./variables.module.scss";
+@import "./darkmode.module.scss";
+
+.pageHeaderContainer {
+    display: flex;
+    flex-direction: row; 
+    height: 72px;
+    gap: 11px;
+    max-width: $main-content-width;
+    margin: 0 auto 0 auto;
+}
+
+.pageHeaderBottom {
+  left: 0;
+  right: 0;
+  margin: 0 calc(0px - $main-content-padding);
+  display: block;
+  height: 1px;
+  background-color: $primary;
+  opacity: .5;
+}
+
+.menuButton {
+  $bar-w: 28px;
+  $bar-h: 2px;
+  $bar-color: $primary;
+  width: $bar-w;
+  height: ($bar-w *3) /4;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  b {
+    width: $bar-w;
+    height: $bar-h;
+    background-color: $bar-color;
+    display: block;
+    transition: all 200ms ease-in-out;
+    transform-origin: center left;
+
+  }
+}
+
+.menuButtonAnimate {
+  b:nth-child(1) {
+    transform: rotate(45deg) translateY(-1px);
+  }
+  b:nth-child(2) {
+    background-color: $background;
+  }
+  b:nth-child(3) {
+    transform: rotate(-45deg) translateY(1px);
+  }
+}
+
+.hide {
+  display: none;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  max-width: $main-content-width;
+  right: 0;
+  margin: 0 auto;
+  border-bottom: 1px solid $primary;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 10px;
+  overflow-x: hidden;
+  background-color: $background;
+  a {
+    padding: 10px;
+    padding-left: 10px;
+    margin: 0 calc(0px - $main-content-padding);
+    text-indent: $main-content-padding;
+    &:last-child {
+      border: 5px !important;
+      border-collapse: separate;
+    }
+  }
+  
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+

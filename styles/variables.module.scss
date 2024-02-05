@@ -1,0 +1,6 @@
+$main-content-width: 1200px;
+$main-content-padding: 20px;
+:export {
+  mainContentWidth: $main-content-width;
+  mainContentPadding: $main-content-padding;
+}

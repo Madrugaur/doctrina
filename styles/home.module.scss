@@ -1,0 +1,13 @@
+@import "./variables.module.scss";
+
+.intro {
+  display: block;
+}
+
+@media screen and (min-width: $main-content-width) {
+  .intro {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+  }
+}
